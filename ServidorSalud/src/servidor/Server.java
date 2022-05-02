@@ -71,11 +71,11 @@ public class Server {
             while (socket.isConnected()) {
                 try {
                     ArrayList messageFromClient = (ArrayList) ois.readObject();
-                    System.out.println(messageFromClient);
                     String asunto = (String) messageFromClient.get(0);
                     switch (asunto) {
                         case "Credenciales":
                             ArrayList respuesta = new ArrayList();
+                            //Asunto
                             respuesta.add("Respuesta Credenciales");
                             respuesta.add(true);
                             broadcastMessage(respuesta);

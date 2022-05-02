@@ -8,7 +8,6 @@ package UI;
 import cliente.Client;
 import java.util.ArrayList;
 
-
 /**
  *
  * @author carls
@@ -108,21 +107,22 @@ public class InicioSesionGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
-        if (this.cliente == null) {
-            if (!tfCorreo.getText().equals("") && !tfContra.getText().equalsIgnoreCase("")) {
-                cliente = new Client();
 
-                ArrayList msg = new ArrayList();
-                msg.add(tfCorreo.getText());
-                msg.add(tfContra.getText());
-                cliente.sendMessage("Credenciales", msg);
-                if (cliente.getAutorizacion()) {
-                    MenuPrincipal mp = new MenuPrincipal();
-                    mp.setVisible(true);
-                    this.dispose();
-                }
+        if (!tfCorreo.getText().equals("") && !tfContra.getText().equalsIgnoreCase("")) {
+            if (this.cliente == null) {
+                cliente = new Client();
+            }
+            ArrayList msg = new ArrayList();
+            msg.add(tfCorreo.getText());
+            msg.add(tfContra.getText());
+            cliente.sendMessage("Credenciales", msg);
+            if (cliente.getAutorizacion()) {
+                MenuPrincipal mp = new MenuPrincipal();
+                mp.setVisible(true);
+                this.dispose();
             }
         }
+
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
 
     /**

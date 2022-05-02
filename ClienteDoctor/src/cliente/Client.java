@@ -63,13 +63,7 @@ public class Client {
                         ArrayList msgRecibido = (ArrayList) ois.readObject();
                         System.out.println(msgRecibido);
                         String asunto = (String) msgRecibido.get(0);
-                        ArrayList msgEnviar = new ArrayList();
                         switch (asunto) {
-                            case "Credenciales":
-                                msgEnviar.add(true);
-                                sendMessage("Credenciales", msgEnviar);
-                                Thread.sleep(1000);
-                                break;
                             case "Respuesta Credenciales":
                                 autorizacion = (Boolean) msgRecibido.get(1);
                                 break;
