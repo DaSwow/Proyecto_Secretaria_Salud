@@ -13,6 +13,7 @@ public class Client {
     private ObjectOutputStream oos;
     private ObjectInputStream ois;
     private Boolean autorizacion;
+    private String resultadoAgregarCita;
 
     public Client() {
         try {
@@ -53,6 +54,19 @@ public class Client {
         }
     }
 
+    public String getResultadoAgregarCita() {
+        while (true) {
+            if (resultadoAgregarCita != null) {
+                return resultadoAgregarCita;
+            }
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+
     public void listenForMessage() {
         new Thread(new Runnable() {
             @Override
@@ -66,6 +80,9 @@ public class Client {
                             case "Respuesta Credenciales":
                                 autorizacion = (Boolean) msgRecibido.get(1);
                                 break;
+                            case "RespuestaAgregarCita":
+                                ArrayList respuesta = (ArrayList) msgRecibido.get(1);
+                                resultadoAgregarCita = (String) respuesta.get(0);
                             default:
                                 break;
                         }

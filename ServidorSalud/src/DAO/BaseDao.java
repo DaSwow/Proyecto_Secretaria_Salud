@@ -19,7 +19,7 @@ public abstract class BaseDao<T> {
     protected EntityManagerFactory managerFactory = Persistence.createEntityManagerFactory("ServidorSaludPU");
     protected EntityManager em = managerFactory.createEntityManager();
 
-    public abstract void agregar(T entidad);
+    public abstract T agregar(T entidad);
 
     public abstract void eliminar(T entidad);
 

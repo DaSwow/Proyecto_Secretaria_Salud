@@ -77,6 +77,9 @@ public class Server {
                         case "Credenciales":
                             broadcastMessage(mh.calcularRespuesta(asunto,(ArrayList)messageFromClient.get(1)));
                             break;
+                        case "AgendarCita":
+                            broadcastMessage(mh.calcularRespuesta(asunto,(ArrayList)messageFromClient.get(1)));
+                            break;
                         default:
                             break;
                     }

@@ -32,18 +32,18 @@ public class InicioSesionGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        tfCorreo = new javax.swing.JTextField();
+        labelCredencial = new javax.swing.JLabel();
+        tfCredencial = new javax.swing.JTextField();
         tfContra = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         btnIniciarSesion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Correo");
+        labelCredencial.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelCredencial.setText("Credencial");
 
-        tfCorreo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        tfCredencial.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         tfContra.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
@@ -68,8 +68,8 @@ public class InicioSesionGUI extends javax.swing.JFrame {
                         .addGap(53, 53, 53)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tfContra, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tfCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)
+                            .addComponent(tfCredencial, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelCredencial)
                             .addComponent(jLabel2)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(126, 126, 126)
@@ -80,9 +80,9 @@ public class InicioSesionGUI extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addComponent(jLabel1)
+                .addComponent(labelCredencial)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tfCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tfCredencial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
@@ -110,16 +110,16 @@ public class InicioSesionGUI extends javax.swing.JFrame {
 
     private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
 
-        if (!tfCorreo.getText().equals("") && !tfContra.getText().equalsIgnoreCase("")) {
+        if (!tfCredencial.getText().equals("") && !tfContra.getText().equalsIgnoreCase("")) {
             if (this.cliente == null) {
                 cliente = new Client();
             }
             ArrayList msg = new ArrayList();
-            msg.add(tfCorreo.getText());
+            msg.add(tfCredencial.getText());
             msg.add(tfContra.getText());
             cliente.sendMessage("Credenciales", msg);
             if (cliente.getAutorizacion()) {
-                MenuPrincipal mp = new MenuPrincipal();
+                MenuPrincipal mp = new MenuPrincipal(tfCredencial.getText());
                 mp.setVisible(true);
                 this.dispose();
             } else {
@@ -172,10 +172,10 @@ public class InicioSesionGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIniciarSesion;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelCredencial;
     private javax.swing.JTextField tfContra;
-    private javax.swing.JTextField tfCorreo;
+    private javax.swing.JTextField tfCredencial;
     // End of variables declaration//GEN-END:variables
 }

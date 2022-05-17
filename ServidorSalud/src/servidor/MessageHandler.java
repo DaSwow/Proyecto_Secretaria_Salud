@@ -1,6 +1,7 @@
 
 package servidor;
 
+import DAO.CitaDao;
 import DAO.UsuarioDao;
 import java.util.ArrayList;
 
@@ -22,6 +23,17 @@ public class MessageHandler {
                 respuesta.add("Respuesta Credenciales");
                 respuesta.add(ud.autenticar(credencial, contrasena));
                 return respuesta;
+            case "AgendarCita":
+                CitaDao cd = new CitaDao();
+                String credencialDoctor = (String)contenidoMensaje.get(0);
+                String nssPaciente = (String)contenidoMensaje.get(1);
+                
+                
+                ArrayList datosAgregar = new ArrayList();
+                datosAgregar.add(credencialDoctor);
+                datosAgregar.add(nssPaciente);
+                respuesta.add("RespuestaAgregarCita");
+                respuesta.add(cd.agregar(datosAgregar));
             default:
                 respuesta.add("Error");
                 return respuesta;
