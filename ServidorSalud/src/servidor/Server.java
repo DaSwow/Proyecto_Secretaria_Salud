@@ -6,6 +6,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import servidor.MessageHandler;
 
 public class Server {
 
@@ -49,8 +50,7 @@ public class Server {
         private Socket socket;
         private ObjectInputStream ois;
         private ObjectOutputStream oos;
-        //Credenciales cliente
-        //private String clientUsername;
+        MessageHandler mh = new MessageHandler();
 
         public ClientHandler(Socket socket) {
             try {
@@ -72,13 +72,10 @@ public class Server {
                 try {
                     ArrayList messageFromClient = (ArrayList) ois.readObject();
                     String asunto = (String) messageFromClient.get(0);
+                    
                     switch (asunto) {
                         case "Credenciales":
-                            ArrayList respuesta = new ArrayList();
-                            //Asunto
-                            respuesta.add("Respuesta Credenciales");
-                            respuesta.add(true);
-                            broadcastMessage(respuesta);
+                            broadcastMessage(mh.calcularRespuesta(asunto,(ArrayList)messageFromClient.get(1)));
                             break;
                         default:
                             break;

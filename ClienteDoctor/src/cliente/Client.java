@@ -43,7 +43,6 @@ public class Client {
     public Boolean getAutorizacion() {
         while (true) {
             if (autorizacion != null) {
-                System.out.println("Autorizacion pedida: " + autorizacion);
                 return autorizacion;
             }
             try {

@@ -7,6 +7,7 @@ package UI;
 
 import cliente.Client;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -18,6 +19,7 @@ public class InicioSesionGUI extends javax.swing.JFrame {
 
     public InicioSesionGUI() {
         initComponents();
+        configurarPantalla();
     }
 
     /**
@@ -120,10 +122,19 @@ public class InicioSesionGUI extends javax.swing.JFrame {
                 MenuPrincipal mp = new MenuPrincipal();
                 mp.setVisible(true);
                 this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "Credenciales Incorrectas", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
 
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
+
+    private void configurarPantalla() {
+        this.pack();
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+        this.setTitle("Menú Principal");
+    }
 
     /**
      * @param args the command line arguments
