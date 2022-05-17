@@ -50,19 +50,11 @@ public class Cita implements Serializable {
         this.nsspaciente = nsspaciente;
     }
 
-   
-    
-    public Cita(Integer idcita) {
-        this.idcita = idcita;
-    }
 
     public Integer getIdcita() {
         return idcita;
     }
 
-    public void setIdcita(Integer idcita) {
-        this.idcita = idcita;
-    }
 
     public Integer getIddoctor() {
         return iddoctor;

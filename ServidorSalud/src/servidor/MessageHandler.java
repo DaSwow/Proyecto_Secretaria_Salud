@@ -14,6 +14,7 @@ public class MessageHandler {
     public ArrayList calcularRespuesta(String asunto, ArrayList contenidoMensaje) {
         ArrayList respuesta = new ArrayList();
         switch (asunto) {
+            //Autentificacion
             case "Credenciales":
                 //Validar respuesta
                 UsuarioDao ud = new UsuarioDao();
@@ -23,6 +24,7 @@ public class MessageHandler {
                 respuesta.add("Respuesta Credenciales");
                 respuesta.add(ud.autenticar(credencial, contrasena));
                 return respuesta;
+                //Sistema citas
             case "AgendarCita":
                 CitaDao cd = new CitaDao();
                 String credencialDoctor = (String)contenidoMensaje.get(0);
