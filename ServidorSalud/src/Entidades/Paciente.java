@@ -48,6 +48,12 @@ public class Paciente implements Serializable {
     @Column(name = "datoBiometrico")
     private byte[] datoBiometrico;
 
+    public Paciente() {
+    }
+
+    public Paciente(Integer idpaciente) {
+        this.idpaciente = idpaciente;
+    }
 
     public Paciente(Integer idpaciente, String nombrepaciente, String nss) {
         this.idpaciente = idpaciente;
@@ -57,10 +63,6 @@ public class Paciente implements Serializable {
 
     public Integer getIdpaciente() {
         return idpaciente;
-    }
-
-    public void setIdpaciente(Integer idpaciente) {
-        this.idpaciente = idpaciente;
     }
 
     public String getNombrepaciente() {

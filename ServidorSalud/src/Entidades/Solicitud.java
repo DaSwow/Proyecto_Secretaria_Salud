@@ -9,6 +9,8 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -28,12 +30,12 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Solicitud.findByIddoctor", query = "SELECT s FROM Solicitud s WHERE s.iddoctor = :iddoctor"),
     @NamedQuery(name = "Solicitud.findByIdpaciente", query = "SELECT s FROM Solicitud s WHERE s.idpaciente = :idpaciente"),
     @NamedQuery(name = "Solicitud.findByNsspaciente", query = "SELECT s FROM Solicitud s WHERE s.nsspaciente = :nsspaciente"),
-    @NamedQuery(name = "Solicitud.findByAceptado", query = "SELECT s FROM Solicitud s WHERE s.aceptado = :aceptado"),
-    @NamedQuery(name = "Solicitud.findBySolicitudcol", query = "SELECT s FROM Solicitud s WHERE s.solicitudcol = :solicitudcol")})
+    @NamedQuery(name = "Solicitud.findByAceptado", query = "SELECT s FROM Solicitud s WHERE s.aceptado = :aceptado")})
 public class Solicitud implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "idsolicitud")
     private Integer idsolicitud;
@@ -46,8 +48,12 @@ public class Solicitud implements Serializable {
     @Column(name = "aceptado")
     private Short aceptado;
 
+    public Solicitud() {
+    }
 
-    
+    public Solicitud(Integer idsolicitud) {
+        this.idsolicitud = idsolicitud;
+    }
 
     public Integer getIdsolicitud() {
         return idsolicitud;
@@ -88,8 +94,6 @@ public class Solicitud implements Serializable {
     public void setAceptado(Short aceptado) {
         this.aceptado = aceptado;
     }
-
-
 
     @Override
     public int hashCode() {

@@ -4,8 +4,8 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>Entidades.Usuario</class>
     <class>Entidades.Cita</class>
-    <class>Entidades.Solicitud</class>
     <class>Entidades.Paciente</class>
+    <class>Entidades.Solicitud</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/usuarios_salud?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

@@ -44,8 +44,12 @@ public class Usuario implements Serializable {
     @Column(name = "contrasena")
     private String contrasena;
 
+    public Usuario() {
+    }
 
-
+    public Usuario(Integer idusuarios) {
+        this.idusuarios = idusuarios;
+    }
 
     public Usuario(Integer idusuarios, String credencial, String contrasena) {
         this.idusuarios = idusuarios;
@@ -55,6 +59,10 @@ public class Usuario implements Serializable {
 
     public Integer getIdusuarios() {
         return idusuarios;
+    }
+    
+      public void setIdusuarios(Integer idusuarios) {
+        this.idusuarios = idusuarios;
     }
 
     public String getCredencial() {
@@ -97,5 +105,5 @@ public class Usuario implements Serializable {
     public String toString() {
         return "Entidades.Usuario[ idusuarios=" + idusuarios + " ]";
     }
-    
+
 }
