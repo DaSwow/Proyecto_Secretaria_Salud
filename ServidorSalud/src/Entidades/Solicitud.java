@@ -55,6 +55,13 @@ public class Solicitud implements Serializable {
         this.idsolicitud = idsolicitud;
     }
 
+    public Solicitud(Integer iddoctor, Integer idpaciente, String nsspaciente, Short aceptado) {
+        this.iddoctor = iddoctor;
+        this.idpaciente = idpaciente;
+        this.nsspaciente = nsspaciente;
+        this.aceptado = aceptado;
+    }
+
     public Integer getIdsolicitud() {
         return idsolicitud;
     }

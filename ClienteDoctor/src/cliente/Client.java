@@ -42,7 +42,7 @@ public class Client {
     }
 
     public Boolean getAutorizacion() {
-          while (true) {
+        while (true) {
             try {
                 Thread.sleep(500);
             } catch (InterruptedException ex) {
