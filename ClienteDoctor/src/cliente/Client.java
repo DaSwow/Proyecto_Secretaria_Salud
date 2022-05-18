@@ -42,15 +42,16 @@ public class Client {
     }
 
     public Boolean getAutorizacion() {
-        while (true) {
-            if (autorizacion != null) {
-                return autorizacion;
-            }
+          while (true) {
             try {
                 Thread.sleep(500);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
             }
+            if (autorizacion != null) {
+                return autorizacion;
+            }
+            
         }
     }
 
