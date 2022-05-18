@@ -3,14 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/Entidades/Usuario.java</file>
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/servidor/Server.java</file>
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/servidor/MessageHandler.java</file>
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/DAO/UsuarioDao.java</file>
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/DAO/SolicitudDao.java</file>
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/Entidades/Cita.java</file>
-            <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/DAO/BaseDao.java</file>
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/DAO/PacienteDao.java</file>
+            <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/Entidades/Solicitud.java</file>
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/Entidades/Paciente.java</file>
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/DAO/CitaDao.java</file>
         </group>
