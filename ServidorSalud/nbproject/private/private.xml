@@ -6,11 +6,13 @@
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/servidor/Server.java</file>
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/servidor/MessageHandler.java</file>
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/DAO/UsuarioDao.java</file>
-            <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/DAO/SolicitudDao.java</file>
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/Entidades/Cita.java</file>
+<<<<<<< HEAD
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/DAO/PacienteDao.java</file>
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/Entidades/Solicitud.java</file>
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/Entidades/Paciente.java</file>
+=======
+>>>>>>> parent of 8838591 (Cambios minimos)
             <file>file:/C:/Users/carls/OneDrive/Escritorio/Distribuidos/Avance02/ServidorSalud/src/DAO/CitaDao.java</file>
         </group>
     </open-files>
