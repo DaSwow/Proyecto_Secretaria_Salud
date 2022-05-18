@@ -45,15 +45,9 @@ public class Solicitud implements Serializable {
     private String nsspaciente;
     @Column(name = "aceptado")
     private Short aceptado;
-    @Column(name = "solicitudcol")
-    private String solicitudcol;
 
-    public Solicitud() {
-    }
 
-    public Solicitud(Integer idsolicitud) {
-        this.idsolicitud = idsolicitud;
-    }
+    
 
     public Integer getIdsolicitud() {
         return idsolicitud;
@@ -95,13 +89,7 @@ public class Solicitud implements Serializable {
         this.aceptado = aceptado;
     }
 
-    public String getSolicitudcol() {
-        return solicitudcol;
-    }
 
-    public void setSolicitudcol(String solicitudcol) {
-        this.solicitudcol = solicitudcol;
-    }
 
     @Override
     public int hashCode() {
